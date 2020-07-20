@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="plus" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="clear" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="register" />
+
+    <Button
+        android:id="@+id/unregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="unregister" />
+
+    <Button
+        android:id="@+id/randomUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="randomUser" />
+
+    <Button
+        android:id="@+id/doWorkBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="doWork" />
+
+    <Button
+        android:id="@+id/dsl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dsl" />
+
+
+</LinearLayout>
