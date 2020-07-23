@@ -7,10 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.work.BackoffPolicy
-import androidx.work.OneTimeWorkRequest
-import androidx.work.WorkInfo
-import androidx.work.WorkManager
+import androidx.work.*
 import com.lzp.jetpack.dsl.main
 import com.lzp.jetpack.lifecycle.MyObserve
 import com.lzp.jetpack.work.SimpleWorker
@@ -73,10 +70,13 @@ class MainActivity : AppCompatActivity() {
 
             WorkManager.getInstance(this).enqueue(request)
 
+            WorkManager.getInstance(this).enqueueUniqueWork("test1", ExistingWorkPolicy.APPEND, request)
+
             // 取消任务的方式
             WorkManager.getInstance(this).cancelAllWork()
             WorkManager.getInstance(this).cancelAllWorkByTag("Simple")
             WorkManager.getInstance(this).cancelWorkById(request.id)
+            WorkManager.getInstance(this).cancelUniqueWork("test1")
 
             // 监听任务的执行状态
             WorkManager.getInstance(this).getWorkInfoByIdLiveData(request.id)

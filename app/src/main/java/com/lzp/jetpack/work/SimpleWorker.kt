@@ -9,6 +9,6 @@ class SimpleWorker(context: Context, workerParams: WorkerParameters) :
     Worker(context, workerParams) {
     override fun doWork(): Result {
         Log.d("SimpleWorker", "doWork")
-        return Result.success()
+        return Result.retry()
     }
 }
